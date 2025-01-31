@@ -19,6 +19,13 @@ public class UserInput {
         double sum = addTwoNumbers(num1, num2);
         System.out.println("Addition Result: " + sum);
 
+        // Call squareRootOfANumber method for num1 and num2
+        double sqrtNum1 = squareRootOfANumber(num1);
+        double sqrtNum2 = squareRootOfANumber(num2);
+
+        System.out.println("Square root of " + num1 + " is: " + sqrtNum1);
+        System.out.println("Square root of " + num2 + " is: " + sqrtNum2);
+
         scan.close(); // Close scanner to prevent resource leaks
     }
 
@@ -35,8 +42,17 @@ public class UserInput {
         }
     }
 
-    // New method to add two numbers and return the result as double
+    // Method to add two numbers and return the result as double
     private static double addTwoNumbers(int a, int b) {
         return (double) (a + b);
+    }
+
+    // Method to calculate and return the square root of a number
+    private static double squareRootOfANumber(double s) {
+        if (s < 0) {
+            System.out.println("Error: Square root of a negative number is not allowed.");
+            return -1; // Returning -1 as an indicator of invalid input
+        }
+        return Math.sqrt(s);
     }
 }
