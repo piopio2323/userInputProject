@@ -13,7 +13,11 @@ public class UserInput {
         int num2 = getValidInteger(scan, "Enter your second integer number:");
 
         int result = num1 * num2;
-        System.out.println("Result: " + result);
+        System.out.println("Multiplication Result: " + result);
+
+        // Call addTwoNumbers method
+        double sum = addTwoNumbers(num1, num2);
+        System.out.println("Addition Result: " + sum);
 
         scan.close(); // Close scanner to prevent resource leaks
     }
@@ -29,5 +33,10 @@ public class UserInput {
                 scan.next(); // Discard invalid input
             }
         }
+    }
+
+    // New method to add two numbers and return the result as double
+    private static double addTwoNumbers(int a, int b) {
+        return (double) (a + b);
     }
 }
