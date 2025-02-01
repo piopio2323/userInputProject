@@ -12,7 +12,7 @@ public class UserInput {
         int num1 = getValidInteger(scan, "Please enter your first integer number:");
         int num2 = getValidInteger(scan, "Enter your second integer number:");
 
-        int result = num1 * num2;
+        int result = num1 * num2 ;
         System.out.println("Multiplication Result: " + result);
 
         // Call addTwoNumbers method
